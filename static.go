@@ -23,11 +23,9 @@ const (
 </head>
 <body>
     <h1>Docker Master Binaries</h1>
-
-	<div class="wrapper">
-
-		<p>These binaries are built and updated with each commit to the master branch of Docker. Want to use that cool new feature that was just merged? Download your system's binary and check out the master docs at <a href="http://docs.master.dockerproject.com" target="_blank">docs.master.dockerproject.com</a>.</p>
-
+    <div class="wrapper">
+        <p>These binaries are built and updated with each commit to the master branch of Docker. Want to use that cool new feature that was just merged? Download your system's binary and check out the master docs at <a href="http://docs.master.dockerproject.com" target="_blank">docs.master.dockerproject.com</a>.</p>
+        <p class="error">Builds are moving to <a href="https://download.docker.com/">download.docker.com</a>, please update your scripts.</p>
         <table>
             <thead>
                 <tr>
@@ -38,14 +36,14 @@ const (
                 </tr>
             </thead>
             <tbody>
-			{{ range $key, $value := . }}
-				<tr>
-					<td valign="top"><a href="/{{ $value.Key }}"><img src="/static/{{ $value.Key | ext }}.png" alt="[ICO]"/></a></td>
-					<td><a href="/{{ $value.Key }}">{{ $value.Key }}</a></td>
-					<td>{{ $value.Size | size }}</td>
-					<td>{{ $value.LastModified }}</td>
-				</tr>
-			{{ end }}
+            {{ range $key, $value := . }}
+                <tr>
+                    <td valign="top"><a href="/{{ $value.Key }}"><img src="/static/{{ $value.Key | ext }}.png" alt="[ICO]"/></a></td>
+                    <td><a href="/{{ $value.Key }}">{{ $value.Key }}</a></td>
+                    <td>{{ $value.Size | size }}</td>
+                    <td>{{ $value.LastModified }}</td>
+                </tr>
+            {{ end }}
             </tbody>
         </table>
     </div>

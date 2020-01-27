@@ -5,7 +5,7 @@
 	padding:0;
 	-webkit-box-sizing:border-box;
 	   -moz-box-sizing:border-box;
-	       box-sizing: border-box; 
+	       box-sizing: border-box;
 }
 
 html {
@@ -23,7 +23,7 @@ body {
 	-webkit-backface-visibility:hidden;
 }
 code {
-	font-family:Inconsolata,monospace;	
+	font-family:Inconsolata,monospace;
 }
 a {
 	color:#61666c;
@@ -48,6 +48,14 @@ a:hover {
 	margin:20px 0;
 	padding:20px;
 	color:#9099A3;
+}
+p.error {
+	background-color: #f8684a;
+	border-radius: .5em;
+	color: white;
+	font-weight: bold;
+	margin-top: 0;
+	text-align: center;
 }
 
 h1 {
